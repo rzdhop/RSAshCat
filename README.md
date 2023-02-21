@@ -11,7 +11,7 @@ Le programme peut être utilisé en utilisant les commandes suivantes :
 ./RSAshCat <chemin_fichier_RSA>
 ```
 
-## Algorithme simple utilisé
+## Algorithme utilisé
 
 L'algorithme de factorisation utilisé dans le projet RSAshCat est le crible quadratique généralisé (General Number Field Sieve - GNFS), qui est une méthode avancée pour factoriser des nombres entiers très grands.
 
@@ -28,3 +28,12 @@ En résolvant cette équation pour p, nous pouvons trouver un facteur de N.
 Pour trouver les nombres <i>a</i> et <i>b</i>, le crible quadratique généralisé utilise une méthode similaire à la méthode rho de Pollard, mais avec des courbes elliptiques. En utilisant ces courbes elliptiques, le programme cherche des points qui se répètent, ce qui indique qu'il y a une collision entre les points. Ces collisions peuvent être utilisées pour trouver des facteurs de N.
 
 Le crible quadratique généralisé est une méthode très puissante pour factoriser des nombres entiers très grands, mais elle nécessite beaucoup de puissance de traitement. En utilisant CUDA pour effectuer les calculs sur le GPU, RSAshCat peut effectuer cette attaque de manière beaucoup plus rapide que les méthodes conventionnelles.
+
+## Répartition des tâches
+
+| Personne	| Tâches | Réalisées |
+| :--- | :---:| ---: |
+| Rida VERDU	| Algoritme & Reconstruction PK | |
+| WAGUE Al-Housseiny	| A definir |  |
+| WIECZOREK Guillaume	|  A definir |  |
+
