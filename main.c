@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	printf("|____________________________________________|");
 
 	if (rsa_file == NULL) {
-		printf("\n\t>>> /!\ The RSA file you provide doesn't exist /!\");
+		printf("\n\t>>> /!\\ The RSA file you provide doesn't exist /!\\");
 		printf("\n\t    Programm finished ...");
 		exit()
 
