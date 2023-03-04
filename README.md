@@ -34,6 +34,6 @@ Le crible quadratique généralisé est une méthode très puissante pour factor
 | Personne	| Tâches | Réalisées |
 | :--- | :---:| ---: |
 | Rida VERDU	| Algoritme & Reconstruction PK | |
-| WAGUE Al-Housseiny	| A definir |  |
+| WAGUE Al-Housseiny	| Interfaces d'interaction utilisateur |  |
 | WIECZOREK Guillaume	|  A definir |  |
 
