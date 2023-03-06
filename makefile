@@ -1,6 +1,11 @@
 # Usage : make ReleaseName="<NomdAppli>"
+#		  make key bit=64
+
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -std=c11
+
+PY=py
+GEN_SCRIPT=modules/genRSA.py
 
 SRC_DIR=src
 OBJ_DIR=obj
@@ -18,6 +23,9 @@ $(EXECUTABLE): $(OBJ)
 
 $(OBJ): $(SRC)
 	$(CC) $(CFLAGS) $^ -o $@
+
+key: $(GEN_SCRIPT) 
+	$(PY) $^ $(bit)
 
 clean:
 	rm -f $(OBJ) $(EXECUTABLE)
