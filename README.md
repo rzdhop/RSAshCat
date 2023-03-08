@@ -13,21 +13,29 @@ Le programme peut être utilisé en utilisant les commandes suivantes :
 
 ## Algorithme utilisé
 
-L'algorithme de factorisation utilisé dans le projet RSAshCat est le crible quadratique généralisé (General Number Field Sieve - GNFS), qui est une méthode avancée pour factoriser des nombres entiers très grands.
+L'algorithme de factorisation utilisé dans le projet RSAshCat est la factorisation de Fermat pour factoriser des nombres entiers.
+Il repose sur la formule :
 
-Le crible quadratique généralisé est basé sur l'utilisation de l'algèbre de corps de nombres. L'idée principale est de trouver un petit facteur p d'un grand nombre entier N en trouvant une paire de nombres a et b tels que :
+$$n\ =\ x^2\ -\ y^2 \equiv\ x\ =\ \sqrt{n\ +\ y^2}$$
 
-$$a^2\ ≡\ b^2\ (mod\ p)$$
+et sur :
 
-En utilisant l'identité *(a + b)(a - b) = a^2 - b^2*, on peut exprimer N comme :
+$$n\ =\ p\ .\ q \equiv\ n\ =\ (x\ +\ y)\ .\ (x\ -\ y)$$
 
-$$N\ =\ (a\ +\ b)(a\ -\ b)\ mod\ p$$
+En itérant sur la valeur de y, il est possible de tester si x est entier, 
+si il est alors x et y sont facteur de n (respectivement p et q).
 
-En résolvant cette équation pour p, nous pouvons trouver un facteur de N.
+## Fonctionnement
 
-Pour trouver les nombres <i>a</i> et <i>b</i>, le crible quadratique généralisé utilise une méthode similaire à la méthode rho de Pollard, mais avec des courbes elliptiques. En utilisant ces courbes elliptiques, le programme cherche des points qui se répètent, ce qui indique qu'il y a une collision entre les points. Ces collisions peuvent être utilisées pour trouver des facteurs de N.
+- Chargement du fichier PEM contenant la clée publique
+- Division des tâche pour les thread du kernel
+- Factorisation du modulus
+- Si trouvé, retour des valeurs du Device au Host
+- Affichage de "n = p*q"
+- Reconstruction de d avec la formule :
 
-Le crible quadratique généralisé est une méthode très puissante pour factoriser des nombres entiers très grands, mais elle nécessite beaucoup de puissance de traitement. En utilisant CUDA pour effectuer les calculs sur le GPU, RSAshCat peut effectuer cette attaque de manière beaucoup plus rapide que les méthodes conventionnelles.
+$$ d\ =\ e^{-1}\ %\ ((p-1)*(q-1))$$
+- Affichage de l'eposant privé !
 
 ## Répartition des tâches
 
