@@ -1,3 +1,3 @@
 #pragma once
 
-void fermat_factorisation(unsigned long long* results, unsigned long long n);
+void fermat_factorisation(unsigned long long int* results, unsigned long long int n);

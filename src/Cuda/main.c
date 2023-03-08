@@ -6,6 +6,11 @@
 
 
 int main(int argc, char** argv) {
+
+    printf(" ____________________________________________");
+	printf("|           RSAshCat v1.0		           |");
+	printf("|____________________________________________|");
+
     unsigned long long int *n = (unsigned long long int*)malloc(sizeof(unsigned long long int)); 
     unsigned int *e = (unsigned int*)malloc(sizeof(unsigned int));
     
@@ -39,5 +44,7 @@ int main(int argc, char** argv) {
     free(results);
     cudaFree(d_results);
     cudaFree(d_parts);
+    free(e);
+    free(n);
     return 0;
 }

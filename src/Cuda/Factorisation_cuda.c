@@ -30,6 +30,10 @@ __global__ void fermat_factorisation_cuda(unsigned long long int* results, unsig
     }
 }
 
+unsigned long long int reconstruct_private_key(unsigned int e, unsigned long long int p, unsigned long long int q){
+    return (unsigned long long int)pow(e, -1) % ((p-1)*(q-1));
+}
+
 void extract_PEM_values(unsigned long long int* n, unsigned int* e, char* filePath){
     RSA *rsa = RSA_new();
 
