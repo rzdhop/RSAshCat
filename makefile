@@ -1,9 +1,11 @@
 # Usage : make ReleaseName="<NomdAppli>"
 #		  make key bit=64
+#		  make GPU
+
 CUDACC=nvcc
+CUDAFLAGS=--expt-relaxed-constexpr
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror -std=c11
-CUDAFLAGS=--expt-relaxed-constexpr
 
 PY=sudo python3
 GEN_SCRIPT=modules/genRSA.py
