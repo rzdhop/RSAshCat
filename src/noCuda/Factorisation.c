@@ -10,6 +10,7 @@ void fermat_factorisation(unsigned long long int* results, unsigned long long in
     unsigned long long x;
     unsigned long long y;
     unsigned short isFactor = FALSE;
+    unsigned int i = 0;
 
     while(!isFactor){
         x = sqrt(n + (pow(i, 2)));
@@ -17,7 +18,9 @@ void fermat_factorisation(unsigned long long int* results, unsigned long long in
             y = i;
             isFactor = TRUE;
         }
+        i++;
     }
+
     if (isFactor) {
         results[0] = (x + y);
         results[1] = (x - y);

@@ -5,7 +5,7 @@
 CUDACC=nvcc
 CUDAFLAGS=--expt-relaxed-constexpr -lcrypto
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror -std=c11 -lcrypto
+CFLAGS=-Wall -Wextra -Werror -std=c11 -lcrypto -Wdeprecated-declarations
 
 PY=sudo python3
 GEN_SCRIPT=modules/genRSA.py
