@@ -6,15 +6,18 @@
 
 /* ------------------- InfoRSARecovery.c : Recovery function of exponent and modulus ------------------- */
 
-int main()
+int main(int argc, char *argv[])
 {
+
+    printf("Vous allez utiliser ce programme vers : %s", argv[1]);
+
     RSA *rsa = RSA_new();
     if (!rsa) {
         fprintf(stderr, "RSA_new() failed.\n");
         exit(1);
     }
 
-    FILE *f = fopen("../../assets/pubKey_64bit.pem", "r");
+    FILE *f = fopen(argv[1], "r");
     if (f == NULL) {
         perror("fopen");
         exit(1);
