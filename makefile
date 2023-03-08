@@ -3,9 +3,9 @@
 #		  make GPU
 
 CUDACC=nvcc
-CUDAFLAGS=--expt-relaxed-constexpr
+CUDAFLAGS=--expt-relaxed-constexpr -lcrypto
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror -std=c11
+CFLAGS=-Wall -Wextra -Werror -std=c11 -lcrypto
 
 PY=sudo python3
 GEN_SCRIPT=modules/genRSA.py

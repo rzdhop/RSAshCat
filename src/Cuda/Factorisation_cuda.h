@@ -13,3 +13,4 @@ static void HandleError( cudaError_t err,
 
 void fermat_factorisation_cuda(unsigned long long int* results, unsigned long long int n, unsigned long long int *parts);
 void reconstruct_private_key(unsigned int e, unsigned long long int p, unsigned long long int q, char** pathName));
+void extract_PEM_values(unsigned long long int* n, unsigned int* e, char[] filePath);
