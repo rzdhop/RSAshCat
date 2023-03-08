@@ -34,7 +34,7 @@ si il est alors x et y sont facteur de n (respectivement p et q).
 - Affichage de "n = p*q"
 - Reconstruction de d avec la formule :
 
-$$ d\ =\ e^{-1}\ %\ ((p-1)*(q-1))$$
+$$ d\ =\ e^{-1}\ \%\ ((p-1)*(q-1))$$
 - Affichage de l'eposant privé !
 
 ## Répartition des tâches
