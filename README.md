@@ -28,14 +28,14 @@ si il est alors x et y sont facteur de n (respectivement p et q).
 ## Fonctionnement
 
 - Chargement du fichier PEM contenant la clée publique
-- Division des tâche pour les thread du kernel
+- Division des tâches pour les thread du kernel
 - Factorisation du modulus
 - Si trouvé, retour des valeurs du Device au Host
 - Affichage de "n = p*q"
 - Reconstruction de d avec la formule :
 
-$$ d\ =\ e^{-1}\ \%\ ((p-1)*(q-1))$$
-- Affichage de l'eposant privé !
+$$ d\ =\ e^{-1}\ mod\ ((p-1)*(q-1))$$
+- Affichage de l'exposant privé !
 
 ## Répartition des tâches
 
