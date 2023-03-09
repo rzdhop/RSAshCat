@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     unsigned long long int *n = (unsigned long long int*)malloc(sizeof(unsigned long long int)); 
     unsigned int *e = (unsigned int*)malloc(sizeof(unsigned int));
     
-    *n = 47693663;
+    *n = 41725382548836457;
     *e = 65537;
     //extract_PEM_values(n, e, argv[1]);
     unsigned long long int *results = (unsigned long long int*)malloc(2*sizeof(unsigned long long int));
