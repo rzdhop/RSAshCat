@@ -37,11 +37,3 @@ si il est alors x et y sont facteur de n (respectivement p et q).
 $$ d\ =\ e^{-1}\ mod\ ((p-1)*(q-1))$$
 - Affichage de l'exposant privé !
 
-## Répartition des tâches
-
-| Personne	| Tâches | Réalisées |
-| :--- | :---:| ---: |
-| Rida VERDU	| Algoritme & Reconstruction PK | |
-| WAGUE Al-Housseiny	| Interfaces d'interaction utilisateur |  |
-| WIECZOREK Guillaume	|  A definir |  |
-
